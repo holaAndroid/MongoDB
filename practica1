@@ -1,0 +1,21 @@
+El objetivo de la práctica es crear una BDD en MongoDB para gestionar una red social llamada fotored. La BDD contendrá una colección llamada redsocial que incluirá los siguientes tipos de contenido:
+- usuario
+- mensajes
+- conectado: si o no
+- seguidores
+- sigue
+- puntuacion
+Realizar las siguientes operaciones:
+1- Crear la BDD y la colección en MongoDB
+2- Añadir un documento (registro) para el usuario Juan50mm con los datos que queramos
+3- Añadir otro documento para el usuario CamilaAP con los datos que queramos
+4- Añadir en una sola operación los documentos (registros) para tres usuarios más, con los datos que queramos: FrankEOS, BenLandscape, PaulaShutter
+5- Localizar todos los usuarios conectados
+6- Localizar todos los usuarios con más de 100 seguidores
+7- Modificar el usuario CamilaAP. Cambiar el número de seguidores a 101
+8- Añadir a todos los usuarios un nuevo campo llamado estilo, que será paisaje.
+9- Modificar el estilo de CamilaAP y FrankEOS a retrato.
+10- Eliminar campo puntuación de todos los usuarios simultáneamente.
+11- Agregar campo puntuación a todos los usuarios con el valor 0.
+
+Todas las operaciones deberán quedar registradas en un documento.
