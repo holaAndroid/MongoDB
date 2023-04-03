@@ -18,4 +18,13 @@ Realizar las siguientes operaciones:
 10- Eliminar campo puntuación de todos los usuarios simultáneamente.
 11- Agregar campo puntuación a todos los usuarios con el valor 0.
 
-Todas las operaciones deberán quedar registradas en un documento.
+
+Práctica 2 
+1.	Asignar 50 puntos a PaulaShutter
+2.	Asignar 10 puntos al resto
+3.	Buscar todos los usuarios cuya puntuación sea 10, 40 o 50
+4.	Buscar todos los usuarios cuya puntuación no sea 10
+5.	Buscar aquellos usuarios cuyo estilo no sea ni retrato, ni paisaje.
+6.	Borrar todos los usuarios con puntuación de 40 o 50
+7.	Poner como desconectados a todos los usuarios
+8.	Mostrar a todos los usuarios que siguen a más de 1000 usuarios.
