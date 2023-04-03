@@ -1,0 +1,107 @@
+// use("fotored");
+// db.createCollection("redsocial");
+db.redsocial.insertOne({
+  usuario: "Juan50mm",
+  mensaje: "taller de chapa y pintura",
+  conectado: "sí",
+  seguidores: 50,
+  sigue: 2,
+  puntuacion: 6,
+});
+db.redsocial.insertOne({
+  usuario: "CamilaAP",
+  mensaje:
+    "comenzamos emprendimiento social. Nuestro primer proyecto una aplicación web en React para solicitar servicio de transporte",
+  conectado: "sí",
+  seguidores: 50,
+  sigue: 2,
+  puntuacion: 6,
+});
+db.redsocial.insertMany([
+  {
+    usuario: "FrankEOS",
+    mensaje: "comenzamos creando el diagrama de flujo",
+    conectado: "no",
+    seguidores: 1,
+    sigue: 5,
+    puntuacion: 4,
+  },
+  {
+    usuario: "BenLandscape",
+    mensaje:
+      "ilusionada por la formación que voy a comenzar donde serán los primeros pasos en fotografía.",
+    conectado: "si",
+    seguidores: 5000,
+    sigue: 400,
+    puntuacion: 5,
+  },
+  {
+    usuario: "PaulaShutter",
+    mensaje:
+      "más oportunidades laborales fuera de España. Yea! ¡Allá vamos! nos vamos a Alemania",
+    conectado: "si",
+    seguidores: 4,
+    sigue: 1500,
+    puntuacion: 7,
+  },
+]);
+db.redsocial.find({ conectado: { $in: ["si"] } });
+db.redsocial.find({ seguidores: { $gt: 100 } });
+db.redsocial.updateOne({ usuario: "CamilaAP" }, { $set: { seguidores: 101 } });
+db.redsocial.updateOne(
+  { usuario: "Juan50mm" },
+  { $set: { estilo: "paisaje" } }
+);
+db.redsocial.updateOne(
+  { usuario: "CamilaAP" },
+  { $set: { estilo: "paisaje" } }
+);
+db.redsocial.updateOne(
+  { usuario: "FrankEOS" },
+  { $set: { estilo: "paisaje" } }
+);
+db.redsocial.updateOne(
+  { usuario: "BenLandscape" },
+  { $set: { estilo: "paisaje" } }
+);
+db.redsocial.updateOne(
+  { usuario: "PaulaShutter" },
+  { $set: { estilo: "paisaje" } }
+);
+db.redsocial.updateOne(
+  { usuario: "CamilaAP" },
+  { $set: { estilo: "retrato" } }
+);
+db.redsocial.updateOne(
+  { usuario: "FrankEOS" },
+  { $set: { estilo: "retrato" } }
+);
+db.redsocial.updateMany({}, { $unset: { puntuacion: "" } });
+db.redsocial.find();
+use("fotored");
+db.redsocial.updateMany({}, { $set: { puntuacion: 0 } });
+db.redsocial.find();
+use("fotored");
+db.redsocial.updateOne(
+  { usuario: "PaulaShutter" },
+  { $set: { puntuacion: 50 } }
+);
+use("fotored");
+db.redsocial.updateMany(
+  { puntuacion: { $ne: 50 } },
+  { $set: { puntuacion: 10 } }
+);
+db.redsocial.find();
+use("fotored");
+db.redsocial.find({ puntuacion: { $in: [10, 40, 50] } });
+use("fotored");
+db.redsocial.find({ puntuacion: { $ne: 10 } });
+use("fotored");
+db.redsocial.find({ estilo: { $nin: ["retrato", "paisaje"] } });
+use("fotored");
+db.redsocial.find({ puntuacion: { $in: [40, 50] } });
+use("fotored");
+db.redsocial.updateMany({}, { $set: { conectado: "no" } });
+db.redsocial.find();
+use("fotored");
+db.redsocial.find({ sigue: { $gt: 1000 } });
