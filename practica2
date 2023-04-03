@@ -1,3 +1,5 @@
+=============================== Práctica1 =============================================
+
 El objetivo de la práctica es crear una BDD en MongoDB para gestionar una red social llamada fotored. La BDD contendrá una colección llamada redsocial que incluirá los siguientes tipos de contenido:
 - usuario
 - mensajes
@@ -19,7 +21,7 @@ Realizar las siguientes operaciones:
 11- Agregar campo puntuación a todos los usuarios con el valor 0.
 
 
-Práctica 2 
+================================== Práctica 2 =========================================
 1.	Asignar 50 puntos a PaulaShutter
 2.	Asignar 10 puntos al resto
 3.	Buscar todos los usuarios cuya puntuación sea 10, 40 o 50
@@ -28,3 +30,4 @@ Práctica 2
 6.	Borrar todos los usuarios con puntuación de 40 o 50
 7.	Poner como desconectados a todos los usuarios
 8.	Mostrar a todos los usuarios que siguen a más de 1000 usuarios.
+
